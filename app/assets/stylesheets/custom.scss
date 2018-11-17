@@ -1,0 +1,43 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+nav {
+  background-color: #073B15;
+}
+
+.nav-tabs {
+  border-bottom: none;
+}
+
+#logo,
+.nav-item a {
+  color: white;
+  font-weight: bold;
+  font-size: 1.7em;
+}
+
+#logo {
+  float: left;
+  text-transform: uppercase;
+}
+
+.navbar .nav > li > a:hover {
+  text-decoration: none;
+  background-color: black;
+}
+
+.jumbotron {
+  color: white;
+  background-image: url("food.jpg");
+  background-size: cover;
+}
+
+.home-content {
+  margin-bottom: 100px;
+}
+
+footer {
+  text-align: center;
+  color: white;
+  background-color: #073B15;
+}

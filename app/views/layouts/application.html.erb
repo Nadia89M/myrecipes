@@ -10,6 +10,17 @@
   </head>
 
   <body>
-    <%= yield %>
+    <%= render "layouts/navbar" %>
+    <div class="container">
+      <%= yield %>
+    </div>
+    <footer class="text-muted">
+      <div class="container">
+        <p class="float-right">
+          <%= link_to "Back to top", root_path, style: "color: white;"%>
+        </p>
+        <p>&copy; JustVirtual 2018</p>
+      </div>
+    </footer>
   </body>
 </html>
