@@ -8,4 +8,8 @@ Rails.application.routes.draw do
   post '/login', to: "sessions#create"
   delete '/logout', to: "sessions#destroy"
   resources :chefs, except: [:new]
+  resources :ingredients, except: [:destroy]
+  resources :recipes do
+    resources :comments, only: [:create]
+  end
 end
