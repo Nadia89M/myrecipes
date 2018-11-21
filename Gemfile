@@ -70,6 +70,7 @@ end
 #It is a gem that communicates with PostgreSQL databases
 group :production do
   gem 'pg', '~> 0.20'
+  gem 'redis'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
