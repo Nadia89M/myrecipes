@@ -26,6 +26,9 @@
     <li class="nav-item pull-right">
       <%= link_to "Create a new recipe", new_recipe_path, class: "nav-link"%>
     </li>
+    <li class="nav-item pull-right">
+      <%= link_to "ChefChat", chat_path %>
+    </li>
     <%end%>
     <% if logged_in? %>
     <li class="dropdown nav-item pull-right">
