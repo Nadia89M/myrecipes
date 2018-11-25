@@ -15,8 +15,8 @@ body {
 }
 
 .jumbotron {
-   background:#ff0;
-   padding:10px;
+   background: #ff0;
+   padding: 10px;
 }
 
 body {
@@ -28,32 +28,137 @@ footer {
    color: white;
    background-color: #073B15;
 }
+/*Navigation Bar*/
 
-//NavBar
-
-nav {
+.nav {
+  height: 50px;
+  width: 100%;
   background-color: #073B15;
+  position: relative;
+  z-index: 9999;
 }
 
-.nav-tabs {
-  border-bottom: none;
+.pullright {
+  float: right !important;
 }
 
-#logo,
-.nav-item a {
-  color: white;
-  font-weight: bold;
-  font-size: 1.7em;
+.nav-title {
+
+  a:link,
+  a:visited {
+    color: #FFA400;
+    font-size: 90%;
+    text-transform: uppercase;
+  }
+
+  a:hover,
+  a:active {
+    color: #FFFFFA;
+    text-decoration: none;
+  }
 }
 
-#logo {
-  float: left;
-  text-transform: uppercase;
+
+.nav > .nav-header {
+  display: inline;
 }
 
-.navbar .nav > li > a:hover {
-  text-decoration: none;
-  background-color: #d9534f;
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 25px;
+  color: #fff;
+  padding: 10px;
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  font-size: 18px;
+  margin: 0 10px;
+}
+
+.nav > .nav-links > a,
+.nav > .nav-links > li > a {
+
+  &:link,
+  &:visited {
+    display: inline-block;
+    padding: 13px 10px 13px 10px;
+    text-decoration: none;
+    color: #FFA400;
+    font-size: 90%;
+    text-transform: uppercase;
+  }
+
+  &:hover,
+  &:active {
+    color: #FFFFFA;
+    text-decoration: none;
+  }
+}
+
+.nav > #nav-check {
+  display: none;
+}
+
+@media (max-width:600px) {
+
+  .pullright {
+    float: left !important;
+  }
+
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #FFA400;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #E5E4EA;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+  }
+  .nav > .nav-links > a,
+  .nav > .nav-links > li > a {
+    display: block;
+    width: 100%;
+  }
+  .nav > #nav-check:not(:checked) + .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked + .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+
+.search-field,
+.search {
+  display: none;
+}
+
 }
 
 //Jumbotron
@@ -156,4 +261,10 @@ nav {
   height: 16em;
   position: relative;
   overflow: auto;
+}
+
+//Likes
+
+.liking {
+  padding-right: 10px;
 }

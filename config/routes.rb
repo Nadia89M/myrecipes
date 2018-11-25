@@ -11,11 +11,14 @@ Rails.application.routes.draw do
   resources :ingredients, except: [:destroy]
   resources :recipes do
     resources :comments, only: [:create]
+      member do
+        post 'like'
+      end
   end
 
   mount ActionCable.server => "/cable"
 
   get "/chat", to: "chatrooms#show"
-  
+
   resources :messages, only: [:create]
 end
