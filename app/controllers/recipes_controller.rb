@@ -10,7 +10,6 @@ class RecipesController < ApplicationController
   end
 
   def show
-    @recipe = Recipe.find (params[:id])
     @comment = Comment.new
     @comments = @recipe.comments.paginate(page: params[:page], per_page: 5)
   end
@@ -31,11 +30,10 @@ class RecipesController < ApplicationController
   end
 
   def edit
-    @recipe = Recipe.find(params[:id])
+
   end
 
   def update
-    @recipe = Recipe.find(params[:id])
     if @recipe.update(recipe_params)
       flash[:success] = "Recipe was updated successfully!"
       redirect_to recipe_path(@recipe)
@@ -45,7 +43,7 @@ class RecipesController < ApplicationController
   end
 
   def destroy
-    Recipe.find(params[:id]).destroy
+    @recipe.destroy
     flash[:success] = "Recipe deleted successfully"
     redirect_to recipes_path
   end
