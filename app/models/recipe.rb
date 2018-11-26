@@ -1,5 +1,5 @@
 class Recipe < ApplicationRecord
-  mount_uploader :image, ImageUploader
+  has_one_attached :photo
   belongs_to :chef
   has_many :comments, dependent: :destroy
   has_many :likes, dependent: :destroy

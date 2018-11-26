@@ -2,7 +2,9 @@
 
 <div class="well col-md-8 col-md-offset-2">
   <div align="center">
-    <%= image_tag @recipe.image.url, size: "300x200" if @recipe.image? %>
+    <% if @recipe.photo.attached? %>
+        <%= image_tag @recipe.photo, class: "photo" %>
+    <% end %>
   </div>
   <h4 class="center description"><strong>Steps: </strong></h4>
   <hr />
