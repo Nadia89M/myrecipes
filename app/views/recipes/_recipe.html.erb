@@ -36,5 +36,8 @@
         </div>
       </div>
     </div>
+    <div align="center" class="col-md-2">
+      <%= image_tag recipe.image, class: 'card-img-top photo2' unless recipe.image.nil? %>
+    </div>
   </div>
 <% end %>
