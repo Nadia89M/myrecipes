@@ -10,6 +10,8 @@ class Recipe < ApplicationRecord
   validates :description, presence: true, length: {minimum: 5, maximum: 500}
   default_scope -> { order(updated_at: :desc) }
 
+  mount_uploader :image, ImageUploader
+
   def thumbs_up_total
     self.likes.where(like: true).size
   end
