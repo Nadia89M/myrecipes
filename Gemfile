@@ -35,7 +35,7 @@ gem 'bootstrap-will_paginate', '0.0.10'
 gem 'carrierwave', '~> 1.2', '>= 1.2.3'
 gem 'mini_magick', '~> 4.9', '>= 4.9.2'
 gem 'carrierwave-aws', '~> 1.3'
-gem 'fog', '~> 1.38'
+gem 'dotenv-rails', '~> 2.5'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
